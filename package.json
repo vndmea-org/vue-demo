@@ -1,19 +1,44 @@
 {
-  "name": "todos",
-  "version": "1.0.0",
-  "description": "",
+  "name": "demo",
+  "version": "0.0.2",
+  "description": "webpack, vue, vuex, vue router, node",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/testOrgForJenkins/todos.git"
+    "dev": "node build/dev-server",
+    "start": "node server",
+    "build:dev": "rimraf dist && webpack --config build/webpack.dev.js --progress --hide-modules",
+    "build:prod": "rimraf dist && webpack -p --config build/webpack.prod.js --progress --hide-modules",
+    "package": ""
   },
   "author": "wenz",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/testOrgForJenkins/todos/issues"
+  "dependencies": {
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.2",
+    "vuex": "^3.0.1"
   },
-  "homepage": "https://github.com/testOrgForJenkins/todos#readme"
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^1.0.1",
+    "express": "^4.16.4",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "url-loader": "^1.1.2",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.17",
+    "vuex-router-sync": "^5.0.0",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.4"
+  }
 }
