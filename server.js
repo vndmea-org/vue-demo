@@ -1,7 +1,6 @@
 const path = require('path');
 const express = require('express');
 const resolve = dir => path.join(__dirname, "..", dir);
-const isProd = process.env.NODE_ENV === 'production';
 
 const app = express();
 const router = express.Router();

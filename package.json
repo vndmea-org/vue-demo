@@ -1,15 +1,16 @@
 {
   "name": "demo",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.2",
+  "description": "webpack, vue, vuex, vue router, node",
   "main": "app.js",
   "scripts": {
-    "dev": "node server",
+    "dev": "node build/dev-server",
     "start": "node server",
-    "build": "rimraf dist && webpack --progress --config build/webpack.config.js --mode=production",
+    "build:dev": "rimraf dist && webpack --config build/webpack.dev.js --progress --hide-modules",
+    "build:prod": "rimraf dist && webpack -p --config build/webpack.prod.js --progress --hide-modules",
     "package": ""
   },
-  "author": "",
+  "author": "wenz",
   "license": "ISC",
   "dependencies": {
     "vue": "^2.5.17",
@@ -37,7 +38,7 @@
     "vuex-router-sync": "^5.0.0",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-middleware": "^3.4.0",
-    "webpack-hot-middleware": "^2.24.3"
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.4"
   }
 }
