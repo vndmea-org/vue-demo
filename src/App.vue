@@ -99,9 +99,12 @@ const filters = {
   }
 };
 
+let app = {};
+
 export default {
   name: "app",
   data() {
+    app = this;
     return {
       todos: todoStorage.fetch(),
       newTodo: "",
