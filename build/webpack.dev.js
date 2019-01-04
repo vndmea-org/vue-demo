@@ -3,11 +3,11 @@ const autoprefixer = require('autoprefixer');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
-module.exports =  merge(common, {
+module.exports = merge(common, {
   mode: 'development',
   devtool: '#cheap-module-source-map',
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),    
+    new webpack.HotModuleReplacementPlugin(),
   ],
   performance: {
     maxEntrypointSize: 300000,
@@ -29,12 +29,12 @@ module.exports =  merge(common, {
         },
       },
       {
-        test: /\.less$/, 
-        use: ["style-loader", "css-loader", "less-loader"]
+        test: /\.less$/,
+        use: ['style-loader', 'css-loader', 'less-loader'],
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },

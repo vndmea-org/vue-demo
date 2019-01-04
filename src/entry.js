@@ -1,5 +1,4 @@
-import Vue from 'vue';
-import { createApp } from './app';
+import createApp from './app';
 
 const { app } = createApp();
 
