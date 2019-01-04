@@ -1,6 +1,8 @@
 <template>
   <div>
-    <section class="todoapp">
+    <v-app>
+      <v-btn color="primary" @click="fetchAsyncData">Axios</v-btn>
+      <section class="todoapp">
       <header class="header">
         <h1>todos</h1>
         <input
@@ -61,9 +63,8 @@
         >Clear completed</button>
       </footer>
     </section>
-    <footer class="info">
-      <p>Double-click to edit a todo</p>
-    </footer>
+    <footer class="info"></footer>
+    </v-app>    
   </div>
 </template>
 
@@ -145,6 +146,11 @@ export default {
   },
 
   methods: {
+    fetchAsyncData: function() {
+      this.$store.dispatch("FETCH_ASYNC_DATA", "p").then(data => {
+        console.log(data);
+      });
+    },
     addTodo: function() {
       const value = this.newTodo && this.newTodo.trim();
       if (!value) {
