@@ -12,7 +12,7 @@ export default function () {
     state: {},
     modules: {},
     actions: {
-      FETCH_ASYNC_DATA: ({ commit, dispatch, state }, type) => {
+      FETCH_ASYNC_DATA({ commit, state }, type) {
         return fetchData(type).then(data => data);
       },
     },

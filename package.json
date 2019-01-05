@@ -15,7 +15,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "material-design-icons-iconfont": "^4.0.3",
-    "vue": "^2.5.17",
+    "vue": "^2.5.21",
     "vue-router": "^3.0.2",
     "vuetify": "^1.4.0",
     "vuex": "^3.0.1"
@@ -38,7 +38,7 @@
     "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^1.1.2",
     "vue-loader": "^15.4.2",
-    "vue-template-compiler": "^2.5.17",
+    "vue-template-compiler": "^2.5.21",
     "vuex-router-sync": "^5.0.0",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
