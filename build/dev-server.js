@@ -1,16 +1,17 @@
 const webpack = require('webpack');
-const webpackDevServer = require('webpack-dev-server');
+const WebpackDevServer = require('webpack-dev-server');
 
 const config = require('./webpack.dev.js');
+
 const options = {
   contentBase: '../dist',
   hot: true,
-  host: 'localhost'
+  host: 'localhost',
 };
 
-webpackDevServer.addDevServerEntrypoints(config, options);
+WebpackDevServer.addDevServerEntrypoints(config, options);
 const compiler = webpack(config);
-const server = new webpackDevServer(compiler, options);
+const server = new WebpackDevServer(compiler, options);
 
 server.listen(8080, 'localhost', () => {
   console.log('dev server listening on port 8080');
