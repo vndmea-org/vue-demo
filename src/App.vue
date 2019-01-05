@@ -230,7 +230,7 @@ export default {
   },
 
   directives: {
-    'todo-focus'(el, binding) {
+    'todo-focus': function (el, binding) {
       if (binding.value) {
         el.focus();
       }
