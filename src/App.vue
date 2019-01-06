@@ -19,7 +19,7 @@
         </header>
         <section
           class="main"
-          v-show="todos.length"
+          v-show="todos && todos.length"
           v-cloak
         >
           <input
@@ -60,7 +60,7 @@
         </section>
         <footer
           class="footer"
-          v-show="todos.length"
+          v-show="todos && todos.length"
           v-cloak
         >
           <span class="todo-count">
@@ -90,7 +90,7 @@
           <button
             class="clear-completed"
             @click="removeCompleted"
-            v-show="todos.length > remaining"
+            v-show="todos && todos.length > remaining"
           >Clear completed</button>
         </footer>
       </section>
@@ -181,7 +181,7 @@ export default {
 
   methods: {
     fetchAsyncData() {
-      this.$store.dispatch('FETCH_ASYNC_DATA', 'p').then(data => {
+      this.$store.dispatch('FETCH_ASYNC_DATA', {param: 'p'}).then(data => {
         console.log(data);
       });
     },

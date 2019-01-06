@@ -12,8 +12,8 @@ export default function () {
     state: {},
     modules: {},
     actions: {
-      FETCH_ASYNC_DATA({ commit, state }, type) {
-        return fetchData(type).then(data => data);
+      FETCH_ASYNC_DATA({ commit, state }, params) {
+        return fetchData(params).then(data => data);
       },
     },
     mutations: {},

@@ -1,7 +1,6 @@
 const axios = require('axios');
 
 function createAPI({ url, headers }) {
-  delete headers.cookie;
   const instance = axios.create({
     baseURL: url,
     timeout: 30000,
