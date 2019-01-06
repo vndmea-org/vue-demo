@@ -1,22 +1,27 @@
 const path = require('path');
 const express = require('express');
+const proxy = require('http-proxy-middleware');
+const router = require('./routes');
+const history = require('connect-history-api-fallback');
 
 const app = express();
-const resolve = dir => path.resolve(__dirname, dir);
-const morgan = require('morgan');
+const isDev = process.env.NODE_ENV === 'development';
 
-app.use(morgan('dev'));
-app.use('/dist', express.static(resolve('dist')));
+app.use(history());
+app.use('/api', router);
 
-app.use('/', (req, res) => {
-  if (req.url === '/') {
-    res.sendFile(path.resolve(__dirname, './dist/index.html'));
-  } else if (/[.js|.css]$/.test(req.url)) {
-    res.sendFile(path.resolve(__dirname, `./dist${req.url}`));
-  } else {
-    res.status(404).send('Resource Not Found!');
-  }
-});
+if (isDev) {
+  app.use(
+    '/',
+    proxy('/', {
+      target: 'http://localhost:8000',
+      changeOrigin: true,
+    })
+  );
+} else {
+  app.use(express.static(path.resolve(__dirname, './dist')));
+  app.use('/', router);
+}
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
