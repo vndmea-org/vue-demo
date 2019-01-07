@@ -3,7 +3,6 @@ const express = require('express');
 const proxy = require('http-proxy-middleware');
 const router = require('./routes');
 const history = require('connect-history-api-fallback');
-
 const app = express();
 const isDev = process.env.NODE_ENV === 'development';
 

@@ -10,7 +10,6 @@ export default function createRouter() {
   return new Router({
     mode: "history",
     scrollBehavior: () => ({ y: 0 }),
-    base: "/",
     routes: [
       { path: "/", redirect: "/index" },
       {
@@ -24,7 +23,7 @@ export default function createRouter() {
         meta: {}
       },
       {
-        path: "/*",
+        path: "*",
         component: Error,
         meta: {}
       }
