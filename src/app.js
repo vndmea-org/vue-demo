@@ -4,7 +4,19 @@ import zh from './i18n/zh-CN';
 import { sync } from 'vuex-router-sync';
 import Vue from 'vue';
 import App from './App.vue';
-import Vuetify, { VLayout, VApp, VContainer, VFlex, VBtn } from 'vuetify/lib';
+import Vuetify, {
+  VLayout,
+  VApp,
+  VContainer,
+  VFlex,
+  VBtn,
+  VCard,
+  VTab,
+  VTabs,
+  VTabItem,
+  VTextField,
+  VForm
+} from 'vuetify/lib';
 
 Vue.directive('layout', VLayout);
 Vue.use(Vuetify, {
@@ -14,11 +26,17 @@ Vue.use(Vuetify, {
     VBtn,
     VContainer,
     VFlex,
+    VCard,
+    VTab,
+    VTabs,
+    VTabItem,
+    VTextField,
+    VForm
   },
   lang: {
     locales: { en, zh },
-    current: 'zh',
-  },
+    current: 'zh'
+  }
 });
 
 import createRouter from './router';
@@ -33,7 +51,7 @@ export default function() {
   const app = new Vue({
     router,
     store,
-    render: h => h(App),
+    render: h => h(App)
   });
 
   document.title = app.$vuetify.t(app.$vuetify.t('$vuetify.indexPageTitle'));
