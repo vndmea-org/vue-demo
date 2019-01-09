@@ -8,6 +8,7 @@ const options = {
   hot: true,
   host: 'localhost',
   stats: 'errors-only',
+  compress: true,
   quiet: true,
   historyApiFallback: true,
 };

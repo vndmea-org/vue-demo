@@ -8,7 +8,7 @@ function createAPI({ url, headers }) {
   });
 
   instance.interceptors.request.use(
-    (req) => {
+    req => {
       if (req.method === 'get') {
         req.params = Object.assign({}, req.params, { _: Date.now() });
       }
@@ -31,6 +31,8 @@ function apiCreator(headers) {
   });
 }
 
-export default function (params) {
-  return apiCreator({}).get('/test', { params });
-}
+export default {
+  fetchUsers(params) {
+    return apiCreator({}).get('/user/list', { params });
+  },
+};

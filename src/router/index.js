@@ -1,32 +1,38 @@
-import Vue from "vue";
-import Router from "vue-router";
-const Login = () => import("@/views/Login.vue");
-const UserList = () => import("@/views/UserList.vue");
-const Error = () => import("@/views/Error.vue");
+import Vue from 'vue';
+import Router from 'vue-router';
+const Index = () => import('@/views/Index.vue');
+const Users = () => import('@/views/Users.vue');
+const Error = () => import('@/views/Error.vue');
 
 Vue.use(Router);
 
 export default function createRouter() {
   return new Router({
-    mode: "history",
+    mode: 'history',
     scrollBehavior: () => ({ y: 0 }),
     routes: [
-      { path: "/", redirect: "/index" },
+      { path: '/', redirect: '/index' },
       {
-        path: "/index",
-        component: Login,
-        meta: {}
+        path: '/index',
+        component: Index,
+        meta: {
+          title: '$vuetify.indexPageTitle',
+        },
       },
       {
-        path: "/users",
-        component: UserList,
-        meta: {}
+        path: '/users',
+        component: Users,
+        meta: {
+          title: '$vuetify.usersPageTitle',
+        },
       },
       {
-        path: "*",
+        path: '*',
         component: Error,
-        meta: {}
-      }
-    ]
+        meta: {
+          title: '$vuetify.errorPageTitle',
+        },
+      },
+    ],
   });
 }
