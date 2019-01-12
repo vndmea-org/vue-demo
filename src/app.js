@@ -4,6 +4,7 @@ import zh from './i18n/zh-CN';
 import { sync } from 'vuex-router-sync';
 import Vue from 'vue';
 import App from './App.vue';
+import Tab from './components/tab';
 import Vuetify, {
   VLayout,
   VApp,
@@ -19,6 +20,7 @@ import Vuetify, {
 } from 'vuetify/lib';
 
 Vue.directive('layout', VLayout);
+Vue.use(Tab);
 Vue.use(Vuetify, {
   components: {
     VLayout,

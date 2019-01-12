@@ -3,6 +3,7 @@ import Router from 'vue-router';
 const Index = () => import('@/views/Index.vue');
 const Users = () => import('@/views/Users.vue');
 const Error = () => import('@/views/Error.vue');
+const TestTab = () => import('@/views/test/tab/TestTab.vue');
 
 Vue.use(Router);
 
@@ -13,26 +14,30 @@ export default function createRouter() {
     routes: [
       { path: '/', redirect: '/index' },
       {
+        path: '/test-tab',
+        component: TestTab
+      },
+      {
         path: '/index',
         component: Index,
         meta: {
-          title: '$vuetify.indexPageTitle',
-        },
+          title: '$vuetify.indexPageTitle'
+        }
       },
       {
         path: '/users',
         component: Users,
         meta: {
-          title: '$vuetify.usersPageTitle',
-        },
+          title: '$vuetify.usersPageTitle'
+        }
       },
       {
         path: '*',
         component: Error,
         meta: {
-          title: '$vuetify.errorPageTitle',
-        },
-      },
-    ],
+          title: '$vuetify.errorPageTitle'
+        }
+      }
+    ]
   });
 }
