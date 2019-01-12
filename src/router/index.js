@@ -3,6 +3,7 @@ import Router from 'vue-router';
 const Index = () => import('@/views/Index.vue');
 const Users = () => import('@/views/Users.vue');
 const Error = () => import('@/views/Error.vue');
+const Test = () => import('@/views/test/Test.vue');
 const TestTab = () => import('@/views/test/tab/TestTab.vue');
 
 Vue.use(Router);
@@ -14,8 +15,15 @@ export default function createRouter() {
     routes: [
       { path: '/', redirect: '/index' },
       {
-        path: '/test-tab',
-        component: TestTab
+        path: '/test',
+        component: Test,
+        children: [{
+          path: '',
+          component: TestTab,
+        },{
+          path: 'tab',
+          component: TestTab,
+        }]
       },
       {
         path: '/index',

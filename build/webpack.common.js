@@ -9,6 +9,7 @@ module.exports = {
   output: {
     path: resolve('../dist'),
     filename: 'app.[hash:5].js',
+    publicPath: '/',
   },
   resolve: {
     alias: {

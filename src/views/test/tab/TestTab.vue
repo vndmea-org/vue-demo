@@ -14,7 +14,7 @@ import B from '@/views/test/tab/B.vue';
 import C from '@/views/test/tab/C.vue';
 
 export default {
-  name: 'user-view',
+  name: 'test-tab-view',
   components: {
     A,
     B,
