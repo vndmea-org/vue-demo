@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-const Index = () => import('@/views/Index.vue');
+const Index = () => import('@/views/Layout.vue');
 const Users = () => import('@/views/Users.vue');
 const Error = () => import('@/views/Error.vue');
 const Test = () => import('@/views/test/Test.vue');

@@ -2,10 +2,17 @@ const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
+const path = require('path');
+const resolve = (dir) => path.resolve(__dirname, dir);
 
 module.exports = merge(common, {
   mode: 'development',
   devtool: '#cheap-module-source-map',
+  output: {
+    path: resolve('../dist'),
+    filename: '[name].[hash:5].js', // for the dev-server
+    publicPath: '/',
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
   ],

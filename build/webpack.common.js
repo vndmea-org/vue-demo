@@ -6,11 +6,6 @@ const resolve = (dir) => path.resolve(__dirname, dir);
 
 module.exports = {
   entry: resolve('../src/entry.js'),
-  output: {
-    path: resolve('../dist'),
-    filename: 'app.[hash:5].js',
-    publicPath: '/',
-  },
   resolve: {
     alias: {
       vue$: 'vue/dist/vue.esm.js',
@@ -50,4 +45,5 @@ module.exports = {
     }
     ],
   },
+  stats: { children: false } // to fix "Entrypoint undefined = index.html"
 };

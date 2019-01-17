@@ -4,12 +4,12 @@
   "description": "webpack, vue, vuex, vue router, node",
   "main": "app.js",
   "scripts": {
-    "dev": "node build/dev-server",
-    "start:dev": "cross-env NODE_ENV=development node server",
-    "build:dev": "rimraf dist && webpack --config build/webpack.dev.js --progress --hide-modules",
-    "start": "node server",
-    "build:prod": "rimraf dist && webpack -p --config build/webpack.prod.js --progress --hide-modules",
-    "package": ""
+    "d": "node build/dev-server",
+    "sd": "cross-env NODE_ENV=development node server",
+    "sp": "node server",
+    "bd": "rimraf dist && webpack --config build/webpack.dev.js --progress --hide-modules",
+    "bp": "rimraf dist && webpack -p --config build/webpack.prod.js --progress --hide-modules",
+    "package": "yarn run bp && gulp && (cd release && yarn install --prod && tar cvfz package.tar.gz *)"
   },
   "author": "wenz",
   "license": "ISC",
@@ -39,6 +39,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^1.0.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "gulp": "^3.9.1",
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",

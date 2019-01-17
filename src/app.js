@@ -1,4 +1,6 @@
 import './mock/mock-data';
+import 'vuetify/dist/vuetify.min.css';
+
 import en from './i18n/en-US';
 import zh from './i18n/zh-CN';
 import { sync } from 'vuex-router-sync';

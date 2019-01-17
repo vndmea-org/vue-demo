@@ -1,4 +1,3 @@
-import 'vuetify/dist/vuetify.min.css';
 import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from '../api';
