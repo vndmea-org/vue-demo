@@ -33,8 +33,6 @@
     "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^1.1.2",
     "vue-loader": "^15.4.2",
-    "vue-template-compiler": "^2.5.21",
-    "vuex-router-sync": "^5.0.0",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
