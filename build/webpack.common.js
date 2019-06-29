@@ -1,5 +1,4 @@
 const path = require('path');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const resolve = (dir) => path.resolve(__dirname, dir);
@@ -27,7 +26,6 @@ module.exports = {
         removeComments: true,
       },
     }),
-    new VueLoaderPlugin(),
   ],
   module: {
     rules: [
