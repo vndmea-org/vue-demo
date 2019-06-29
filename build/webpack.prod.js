@@ -21,7 +21,6 @@ module.exports = merge(common, {
     hints: 'warning',
   },
   module: {
-    rules: [
-    ],
+    rules: [],
   },
 });
