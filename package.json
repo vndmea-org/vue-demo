@@ -15,7 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "rimraf": "^2.6.3"
   },
   "devDependencies": {
     "autoprefixer": "^9.3.1",
