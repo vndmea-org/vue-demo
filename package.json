@@ -14,18 +14,8 @@
   "author": "wenz",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
-    "cross-env": "^5.2.0",
-    "express": "^4.16.4",
-    "http-proxy-middleware": "^0.19.1",
-    "morgan": "^1.9.1",
-    "material-design-icons-iconfont": "^4.0.3",
-    "rotating-file-stream": "^1.3.10",
-    "vue": "^2.5.21",
-    "vue-router": "^3.0.2",
-    "vuetify": "^1.4.0",
-    "vuex": "^3.0.1"
+    "express": "^4.16.4"
   },
   "devDependencies": {
     "autoprefixer": "^9.3.1",
