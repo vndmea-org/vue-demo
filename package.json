@@ -15,10 +15,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.4",
-    "rimraf": "^2.6.3"
+    "express": "^4.16.4"    
   },
   "devDependencies": {
+    "rimraf": "^2.6.3",
     "autoprefixer": "^9.3.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
